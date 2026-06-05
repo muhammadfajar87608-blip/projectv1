@@ -1,0 +1,24 @@
+
+body { margin: 0; background: radial-gradient(circle, #5d0f28, #2a050f, #000); color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+#flower-container, #sparkle-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; }
+.flower { position: absolute; animation: fall linear infinite; }
+.sparkle { position: absolute; width: 5px; height: 5px; background: white; border-radius: 50%; animation: twinkle 1.5s infinite; }
+@keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+@keyframes twinkle { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+
+#intro { height: 100vh; display: flex; align-items: center; justify-content: center; }
+.gift { font-size: 100px; cursor: pointer; filter: drop-shadow(0 0 20px #ff4d6d); animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+#main-content { display: none; padding: 40px; max-width: 600px; margin: auto; text-align: center; opacity: 0; transition: opacity 2s; }
+.title { font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 30px; color: #ff8fa3; }
+.letter { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 30px; backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+.letter p { margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; }
+
+/* Photo Styles */
+.photo-embed-center img { width: 80%; border-radius: 20px; border: 5px solid rgba(255, 255, 255, 0.1); margin: 20px 0; transition: transform 0.3s; }
+.photo-grid-inline { display: flex; gap: 10px; margin: 20px 0; }
+.photo-grid-inline img { width: 50%; border-radius: 20px; border: 5px solid rgba(255, 255, 255, 0.1); }
+.photo-embed-center img:hover, .photo-grid-inline img:hover { transform: scale(1.05); }
+
+.poetry { margin-top: 50px; font-style: italic; color: #ffd6e0; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 20px; }
